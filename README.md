@@ -1,1 +1,1 @@
-# gpt-prompt-app
+# gpt_prompt_app
