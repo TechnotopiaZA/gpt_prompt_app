@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Saved Prompts</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Role</th>
+            <th>Needs</th>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Format</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prompt in prompts %}
+        <tr>
+            <td>{{ prompt.role }}</td>
+            <td>{{ prompt.needs }}</td>
+            <td>{{ prompt.task }}</td>
+            <td>{{ prompt.details }}</td>
+            <td>{{ prompt.format }}</td>
+            <td>
+                <a href="{{ url_for('edit_prompt', prompt_id=prompt.id) }}" class="btn btn-warning btn-sm">Edit</a>
+                <form action="{{ url_for('delete_prompt', prompt_id=prompt.id) }}" method="POST" style="display:inline;">
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('create_prompt') }}" class="btn btn-primary">Create New Prompt</a>
+{% endblock %}

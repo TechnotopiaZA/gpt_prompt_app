@@ -1,4 +1,4 @@
-# GPT Prompt App
+GPT Prompt App
 
 This application allows you to create and manage GPT prompts with a dynamic and modern user interface.
 

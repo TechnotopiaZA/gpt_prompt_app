@@ -1,0 +1,18 @@
+gpt_prompt_app/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── settings.html
+│   ├── prompts.html
+│   ├── help.html
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│       └── script.js
+├── models.py
+├── forms.py
+├── database.py
+├── requirements.txt
+└── README.md
