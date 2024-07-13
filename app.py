@@ -1,3 +1,4 @@
+import os
 from gpt_prompt_app import create_app
 
 app = create_app()
